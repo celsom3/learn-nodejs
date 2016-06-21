@@ -2,9 +2,38 @@ doctype html
 html
 	head
 		title Jumbotron Template for Bootstrap
-		// Bootstrap core CSS
+		//- Bootstrap core CSS
+		//- link(href='css/main.css', rel='stylesheet')
 		link(href='css/bootstrap.css', rel='stylesheet')
+		style.
+			a.skip-main {
+			left:-999px;
+			position:absolute;
+			top:auto;
+			width:1px;
+			height:1px;
+			overflow:hidden;
+			z-index:-999;
+			}
+			a.skip-main:focus, a.skip-main:active {
+			color: #fff;
+			background-color:#000;
+			left: auto;
+			top: auto;
+			width: 30%;
+			height: auto;
+			overflow:auto;
+			margin: 10px 35%;
+			padding:5px;
+			border-radius: 15px;
+			border:4px solid yellow;
+			text-align:center;
+			font-size:1.2em;
+			z-index:999;
+			}
+
 	body
+		a.skip-main(href="#main") Skip to main content
 		nav.navbar.navbar-inverse
 			.container
 				.navbar-header
@@ -25,9 +54,9 @@ html
 						li
 							a(href='contact') Contact
 				// /.navbar-collapse
-		.container
+		.container#main
 			block content
 			hr
-			footer
-				p © 2015 Company, Inc.
+		footer
+			p © 2015 Company, Inc.
 		// /container
