@@ -25,6 +25,10 @@ app.get('/contact', function(req,res){
 	res.render('contact');
 });
 
+app.get('/services', function(req,res){
+	res.render('services');
+});
+
 app.post('/contact/send', function(req,res){
 	var transporter = nodemailer.createTransport({
 		service: 'Gmail',
